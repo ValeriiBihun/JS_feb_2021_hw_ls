@@ -264,75 +264,443 @@ for (const userNew3Item of usersNew3) {
 console.log(' ');
 
 
-
-
-//
-// ______________________________________________________________________________________________________________________________________________________
 // РОБОТА В АУДИТОРІЇ
 // ______________________________________________________________________________________________________________________________________________________
+
+console.log('_________________________________________________________ ');
+console.log('РОБОТА В АУДИТОРІЇ ');
+console.log('_________________________________________________________ ');
 //
-//
-// const cars = [
-//     {producer:"subaru",model: "wrx",year: 2010, color:"blue",type: "sedan",engine: "ej204x",volume: 2,power: 400},
-//     {producer:"subaru",model: "legacy",year: 2007, color:"silver",type: "sedan",engine: "ez30",volume: 3,power: 250},
-//     {producer:"subaru",model: "tribeca",year: 2011, color:"white",type: "jeep",engine: "ej20",volume: 2,power: 300},
-//     {producer:"subaru",model: "leone",year: 1998, color:"yellow",type: "sedan",engine: "ez20x",volume: 2,power: 140},
-//     {producer:"subaru",model: "impreza",year: 2014, color:"red",type: "sedan",engine: "ej204x",volume: 2,power: 200},
-//     {producer:"subaru",model: "outback",year: 2014, color:"red",type: "hachback",engine: "ej204",volume: 2,power: 165},
-//     {producer:"bmw",model: "115",year: 2013, color:"red",type: "hachback",engine: "f15",volume: 1.5,power: 120},
-//     {producer:"bmw",model: "315",year: 2010, color:"white",type: "sedan",engine: "f15",volume: 1.5, power: 120},
-//     {producer:"bmw",model: "650",year: 2009, color:"black",type: "coupe",engine: "f60",volume: 6,power: 350},
-//     {producer:"bmw",model: "320",year: 2012, color:"red",type: "sedan",engine: "f20",volume: 2,power: 180},
-//     {producer:"mercedes",model: "e200",year: 1990, color:"silver",type: "sedan",engine: "eng200",volume: 2,power: 180},
-//     {producer:"mercedes",model: "e63",year 2017, color:"yellow",type: "sedan",engine: "amg63",volume:3,power: 400},
-//     {producer:"mercedes",model: "c250",year: 2017, color:"red",type: "sedan",engine: "eng25",volume: 2.5,power: 230}
-// ];
-//
-// Відфільтрувати масив за наступними крітеріями :
+const cars = [
+    {
+        producer: "subaru",
+        model: "wrx",
+        year: 2010,
+        color: "blue",
+        type: "sedan",
+        engine: "ej204x",
+        volume: 2,
+        power: 400
+    },
+    {
+        producer: "subaru",
+        model: "legacy",
+        year: 2007,
+        color: "silver",
+        type: "sedan",
+        engine: "ez30",
+        volume: 3,
+        power: 250
+    },
+    {
+        producer: "subaru",
+        model: "tribeca",
+        year: 2011,
+        color: "white",
+        type: "jeep",
+        engine: "ej20",
+        volume: 2,
+        power: 300
+    },
+    {
+        producer: "subaru",
+        model: "leone",
+        year: 1998,
+        color: "yellow",
+        type: "sedan",
+        engine: "ez20x",
+        volume: 2,
+        power: 140
+    },
+    {
+        producer: "subaru",
+        model: "impreza",
+        year: 2014,
+        color: "red",
+        type: "sedan",
+        engine: "ej204x",
+        volume: 2,
+        power: 200
+    },
+    {
+        producer: "subaru",
+        model: "outback",
+        year: 2014,
+        color: "red",
+        type: "hachback",
+        engine: "ej204",
+        volume: 2,
+        power: 165
+    },
+    {producer: "bmw", model: "115", year: 2013, color: "red", type: "hachback", engine: "f15", volume: 1.5, power: 120},
+    {producer: "bmw", model: "315", year: 2010, color: "white", type: "sedan", engine: "f15", volume: 1.5, power: 120},
+    {producer: "bmw", model: "650", year: 2009, color: "black", type: "coupe", engine: "f60", volume: 6, power: 350},
+    {producer: "bmw", model: "320", year: 2012, color: "red", type: "sedan", engine: "f20", volume: 2, power: 180},
+    {
+        producer: "mercedes",
+        model: "e200",
+        year: 1990,
+        color: "silver",
+        type: "sedan",
+        engine: "eng200",
+        volume: 2,
+        power: 180
+    },
+    {
+        producer: "mercedes",
+        model: "e63",
+        year: 2017,
+        color: "yellow",
+        type: "sedan",
+        engine: "amg63",
+        volume: 3,
+        power: 400
+    },
+    {
+        producer: "mercedes",
+        model: "c250",
+        year: 2017,
+        color: "red",
+        type: "sedan",
+        engine: "eng25",
+        volume: 2.5,
+        power: 230
+    }
+];
+
+console.log(' ');
+console.log(' Дано масив: ');
+for (const car of cars) {
+    console.log(car);
+
+}
+console.log(' ');
+
+// Відфільтрувати масив за наступними критеріями :
+console.log('Відфільтрувати масив за наступними критеріями : ');
+
+
 //     - двигун більше 3х літрів
+console.log(' - двигун більше 3х літрів');
+
+let arrCar1 = cars.filter(volume => {
+    return volume.volume > 3
+
+});
+for (let i = 0; i < arrCar1.length; i++) {
+    console.log(arrCar1[i]);
+}
+console.log(' ');
+
 // - двигун = 2л
+console.log(' - двигун = 2л');
+let arrCar2 = cars.filter(value => {
+    return value.volume === 2;
+
+});
+for (let i = 0; i < arrCar2.length; i++) {
+    console.log(arrCar2[i]);
+}
+console.log(' ');
+
 // - виробник мерс
+console.log('  - виробник mercedes');
+let arrCar3 = cars.filter(value => {
+    return value.producer === 'mercedes';
+});
+for (let i = 0; i < arrCar3.length; i++) {
+    console.log(arrCar3[i]);
+
+}
+console.log(' ');
+
 // - двигун більше 3х літрів + виробник мерседес
+console.log('  - двигун більше 3х літрів + виробник мерседес');
+let arrCar4 = cars.filter(value => {
+    return ((value.producer === "mercedes") && (value.volume >= 3))
+});
+for (let i = 0; i < arrCar4.length; i++) {
+    console.log(arrCar4[i]);
+}
+console.log();
+
 // - двигун більше 3х літрів + виробник субару
+console.log('- двигун більше 3х літрів + виробник субару ');
+console.log(' ');
+let arrCar5 = cars.filter(value => {
+    return (value.producer === "subaru") && (value.volume > 3)
+});
+for (const car of arrCar5) {
+    console.log(car);
+}
+console.log(' ');
+
 // - сили більше ніж 300
+console.log('- сили більше ніж 300 ');
+let arrCar6 = cars.filter(value => {
+    return value.power > 300
+});
+for (const car of arrCar6) {
+    console.log(car);
+}
+console.log(' ');
+
 // - сили більше ніж 300 + виробник субару
+console.log('- сили більше ніж 300 + виробник субару ');
+let arrCar7 = cars.filter(value => {
+    return value.power > 300 && value.producer === "subaru"
+});
+for (const car of arrCar7) {
+    console.log(car);
+}
+console.log(' ');
+
 // - мотор серіі ej
+console.log('- мотор серіі ej');
+let arrCar8 = cars.filter(value => {
+    return value.engine.slice(0, 2) === 'ej'
+});
+for (const car of arrCar8) {
+    console.log(car);
+}
+console.log(' ');
+
 // - сили більше ніж 300 + виробник субару + мотор серіі ej
+
+console.log('- сили більше ніж 300 + виробник субару + мотор серіі ej');
+let arrCar9 = cars.filter(value => {
+    return value.power > 300 && value.producer === "subaru" && value.engine.slice(0, 2) === 'ej'
+});
+for (const car of arrCar9) {
+    console.log(car);
+}
+console.log(' ');
+
 // - двигун меньше 3х літрів + виробник мерседес
+console.log('- двигун меньше 3х літрів + виробник мерседес');
+let arrCar10 = cars.filter(value => {
+    return value.volume < 3 && value.producer === "mercedes"
+});
+for (const car of arrCar10) {
+    console.log(car);
+}
+console.log(' ');
+
 // - двигун більше 2л + сили більше 250
+console.log('- двигун більше 2л + сили більше 250');
+let arrCar11 = cars.filter(value => {
+    return value.volume > 2 && value.power > 250
+});
+for (const car of arrCar11) {
+    console.log(car);
+}
+console.log(' ');
+
 // - сили більше 250  + виробник бмв
-//
+console.log('- сили більше 250  + виробник бмв');
+let arrCar12 = cars.filter(value => {
+    return value.power > 250 && value.producer === "bmw"
+});
+for (const car of arrCar12) {
+    console.log(car);
+}
+console.log(' ');
+
 //
 // - взяти наступний массив
-// const usersWithAddress = [
-//     {id: 9, name: 'vasya', age: 31, isMarried: false, address: {city: 'Kyiv', street: 'Gongadze', number: 16}},
-//     {id: 2, name: 'petya', age: 30, isMarried: true, address: {city: 'Rivne', street: 'Zelena', number: 1}},
-//     {id: 4, name: 'kolya', age: 29, isMarried: true, address: {city: 'Lviv', street: 'Pasichna', number: 121}},
-//     {id: 3, name: 'olya', age: 28, isMarried: false, address: {city: 'Rivne', street: 'Shevchenko', number: 90}},
-//     {id: 8, name: 'max', age: 30, isMarried: true, address: {city: 'Lviv', street: 'Kriva Lipa', number: 115}},
-//     {id: 6, name: 'anya', age: 31, isMarried: false, address: {city: 'Lviv', street: 'Shevchenko', number: 2}},
-//     {id: 10, name: 'oleg', age: 28, isMarried: false, address: {city: 'Kyiv', street: 'Centralna', number: 22}},
-//     {id: 5, name: 'andrey', age: 29, isMarried: true, address: {city: 'Lviv', street: 'Gorodotska', number: 43}},
-//     {id: 1, name: 'masha', age: 30, isMarried: true, address: {city: 'Kyiv', street: 'Peremogi', number: 12}},
-//     {id: 7, name: 'olya', age: 31, isMarried: false, address: {city: 'Lviv', street: 'Naukova', number: 16}},
-//     {id: 11, name: 'max', age: 31, isMarried: true, address: {city: 'Rivne', street: 'Ivana Franka', number: 121}}
-// ];
-//
+
+
+const usersWithAddress = [
+    {id: 9, name: 'vasya', age: 31, isMarried: false, address: {city: 'Kyiv', street: 'Gongadze', number: 16}},
+    {id: 2, name: 'petya', age: 30, isMarried: true, address: {city: 'Rivne', street: 'Zelena', number: 1}},
+    {id: 4, name: 'kolya', age: 29, isMarried: true, address: {city: 'Lviv', street: 'Pasichna', number: 121}},
+    {id: 3, name: 'olya', age: 28, isMarried: false, address: {city: 'Rivne', street: 'Shevchenko', number: 90}},
+    {id: 8, name: 'max', age: 30, isMarried: true, address: {city: 'Lviv', street: 'Kriva Lipa', number: 115}},
+    {id: 6, name: 'anya', age: 31, isMarried: false, address: {city: 'Lviv', street: 'Shevchenko', number: 2}},
+    {id: 10, name: 'oleg', age: 28, isMarried: false, address: {city: 'Kyiv', street: 'Centralna', number: 22}},
+    {id: 5, name: 'andrey', age: 29, isMarried: true, address: {city: 'Lviv', street: 'Gorodotska', number: 43}},
+    {id: 1, name: 'masha', age: 30, isMarried: true, address: {city: 'Kyiv', street: 'Peremogi', number: 12}},
+    {id: 7, name: 'olya', age: 31, isMarried: false, address: {city: 'Lviv', street: 'Naukova', number: 16}},
+    {id: 11, name: 'max', age: 31, isMarried: true, address: {city: 'Rivne', street: 'Ivana Franka', number: 121}}
+];
+
+console.log(' ');
+console.log(' Дано масив: ');
+for (const user of usersWithAddress) {
+    console.log(user);
+}
+console.log(' ');
+
 // -- Відсортувати їх по ID
+console.log('-- Відсортувати їх по ID ');
+console.log(' ');
+
+usersWithAddress.sort((a, b) => {
+    if (a.id > b.id) {
+        return 1;
+    } else {
+        return -1;
+    }
+});
+for (const user of usersWithAddress) {
+    console.log(user);
+}
+console.log(' ');
+
+
 // -- Відсортувати їх по ID в зворотньому порядку
+console.log('-- Відсортувати їх по ID в зворотньому порядку ');
+console.log(' ');
+
+usersWithAddress.sort((a, b) => {
+    if (a.id < b.id) {
+        return 1;
+    } else {
+        return -1;
+    }
+});
+for (const user of usersWithAddress) {
+    console.log(user);
+}
+console.log(' ');
+
 // -- Відсортувати по віку
+console.log('-- Відсортувати по віку ');
+console.log(' ');
+usersWithAddress.sort((a, b) => {
+    if (a.age > b.age) {
+        return 1;
+    } else {
+        return -1;
+    }
+});
+for (const user of usersWithAddress) {
+    console.log(user);
+}
+console.log(' ');
 // -- Відсортувати по віку в зворотньому порядку
-// -- Відсорутвати по імені
-// -- Відсорутвати по назві вулиці
-// -- Відсорутвати по номеру будинку
-// -- Залигити тільки тих, хто молодший ніж 30 (filter)
+console.log('-- Відсортувати по віку в зворотньому порядку ');
+console.log(' ');
+usersWithAddress.sort((a, b) => {
+    if (a.age < b.age) {
+        return 1;
+    } else {
+        return -1;
+    }
+});
+for (const user of usersWithAddress) {
+    console.log(user);
+}
+console.log(' ');
+
+// -- Відсортувати по імені
+console.log('-- Відсорутвати по імені');
+usersWithAddress.sort((a, b) => {
+    if (a.name > b.name) {
+        return 1;
+    } else {
+        return -1;
+    }
+});
+for (const user of usersWithAddress) {
+    console.log(user);
+}
+console.log(' ');
+
+// -- Відсортувати по назві вулиці
+console.log('-- Відсортувати по назві вулиці');
+usersWithAddress.sort((a, b) => {
+    if (a.address.street > b.address.street) {
+        return 1;
+    } else {
+        return -1;
+    }
+});
+for (const user of usersWithAddress) {
+    console.log(user);
+}
+console.log(' ');
+
+// -- Відсортувати по номеру будинку
+console.log('-- Відсортувати по номеру будинку');
+usersWithAddress.sort((a, b) => {
+    if (a.address.number > b.address.number) {
+        return 1;
+    } else {
+        return -1;
+    }
+
+});
+for (const user of usersWithAddress) {
+    console.log(user);
+}
+console.log(' ');
+
+// -- Залишити тільки тих, хто молодший ніж 30 (filter)
+console.log('-- Залишити тільки тих, хто молодший ніж 30 (filter) ');
+let userAge = usersWithAddress.filter((value) => {
+    return value.age < 30;
+});
+for (const user of userAge) {
+    console.log(user);
+}
+console.log(' ');
+
 // -- Залишити тільки одружених
-// -- Залишити тільки одружених, які молодні за 30
+console.log(' -- Залишити тільки одружених');
+let userMarried = usersWithAddress.filter((value) => {
+    return value.isMarried;
+});
+for (const user of userMarried) {
+    console.log(user);
+}
+console.log(' ');
+
+// -- Залишити тільки одружених, які молодші за 30
+console.log('-- Залишити тільки одружених, які молодші за 30');
+let userMarriedless30 = usersWithAddress.filter((value) => {
+    return value.isMarried && value.age < 30;
+});
+for (const user of userMarriedless30) {
+    console.log(user);
+}
+console.log(' ');
+
 // -- Залишити лише тих, в кого парні номери будинків.
+console.log('-- Залишити лише тих, в кого парні номери будинків.');
+console.log(' ');
+let userNum2 = usersWithAddress.filter((value) => {
+    return value.address.number % 2 === 0;
+});
+for (const user of userNum2) {
+    console.log(user);
+}
+console.log(' ');
+
 // -- Порахувати загальний вік всіх людей. (reduce)
-// -- Ті, хто одружений і старий за 30 має отримати обєкти child і попасти в новий масив (reduce)
-//
-//
+console.log('-- Порахувати загальний вік всіх людей. (reduce) ');
+let userSumAge = usersWithAddress.reduce((acc, value) => {
+    return acc + value.age;
+}, 0)
+
+console.log('Загальний вік всіх людей:  ' + userSumAge);
+console.log(' ');
+
+// -- Ті, хто одружений і старший за 30 має отримати обєкти child і попасти в новий масив (reduce)
+console.log('- Ті, хто одружений і старший за 30 має отримати обєкти child і попасти в новий масив (reduce) ');
+let userChild = usersWithAddress.reduce((acc, value) => {
+    if ((value.isMarried) && (value.age > 30)) {
+        value.child = {name: 'Ivan', sex: 'boy', age: 3};
+        acc.push(value);
+    }
+    return acc;
+}, []);
+
+for (const stepchild of userChild) {
+    console.log(stepchild);
+}
+console.log(' ');
+
 // ______________________________________________________________________________________________________________________________________________________
 // Додатково
 // ______________________________________________________________________________________________________________________________________________________
